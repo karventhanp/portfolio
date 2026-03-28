@@ -1,45 +1,93 @@
 import React from 'react';
-import { Code2, Sparkles, Zap } from 'lucide-react';
+import { Code2, Sparkles, Zap, Image as ImageIcon, Code } from 'lucide-react';
 import { Card } from './ui/card';
+import { Button } from './ui/button';
+import { useTheme } from '../context/ThemeContext';
 
 const About = () => {
+  const { usePhoto, togglePhoto } = useTheme();
+
   return (
     <section id="about" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             About <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Me</span>
           </h2>
-          <p className="text-gray-400 text-lg">Get to know more about my journey and what drives me</p>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">Get to know more about my journey and what drives me</p>
         </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <div className="relative">
-                <div className="w-full h-96 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 rounded-2xl backdrop-blur-sm border border-cyan-500/20 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-48 h-48 mx-auto bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-full flex items-center justify-center mb-4">
-                      <Code2 size={80} className="text-white" />
+                <div className="w-full h-96 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 dark:from-cyan-500/20 dark:to-emerald-500/20 rounded-2xl backdrop-blur-sm border border-cyan-500/20 flex items-center justify-center overflow-hidden">
+                  {usePhoto ? (
+                    <div className="relative w-full h-full">
+                      {/* Profile Photo - Replace src with actual photo path */}
+                      <img 
+                        src="/profile-photo.jpg" 
+                        alt="Karventhan P" 
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          // Fallback to placeholder if image not found
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      {/* Fallback placeholder */}
+                      <div className="absolute inset-0 hidden flex-col items-center justify-center">
+                        <div className="w-48 h-48 mx-auto bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-full flex items-center justify-center mb-4">
+                          <ImageIcon size={80} className="text-white" />
+                        </div>
+                        <p className="text-cyan-400 text-lg font-medium">Add your photo</p>
+                        <p className="text-gray-400 text-sm mt-2">Place image at /public/profile-photo.jpg</p>
+                      </div>
                     </div>
-                    <p className="text-cyan-400 text-lg font-medium">Frontend Engineer</p>
-                  </div>
+                  ) : (
+                    <div className="text-center">
+                      <div className="w-48 h-48 mx-auto bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-full flex items-center justify-center mb-4">
+                        <Code2 size={80} className="text-white" />
+                      </div>
+                      <p className="text-cyan-400 dark:text-cyan-400 text-lg font-medium">Frontend Engineer</p>
+                    </div>
+                  )}
                 </div>
+                
+                {/* Toggle Button */}
+                <Button
+                  onClick={togglePhoto}
+                  variant="outline"
+                  size="sm"
+                  className="absolute bottom-4 right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border-cyan-500/30 hover:bg-cyan-50 dark:hover:bg-gray-700"
+                >
+                  {usePhoto ? (
+                    <>
+                      <Code size={16} className="mr-2" />
+                      Show Icon
+                    </>
+                  ) : (
+                    <>
+                      <ImageIcon size={16} className="mr-2" />
+                      Show Photo
+                    </>
+                  )}
+                </Button>
               </div>
             </div>
 
             <div className="space-y-6">
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
                 Senior Frontend Engineer with 4+ years of experience architecting and developing scalable 
                 web applications. Proven expertise in React.js, Next.js, and TypeScript with a track record 
                 of delivering high-quality solutions for global enterprises and government platforms.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
                 Specialized in GIS mapping integration (ArcGIS), secure authentication systems (Keycloak, OAuth 2.0), 
                 and performance optimization. Successfully delivered production applications for state governments 
                 (Tamil Nadu, Karnataka, Andhra Pradesh) and international clients including IBM, Veolia, and Suez.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
                 Recognized with "Best Quarter" award for exceptional project delivery and developing optimized, 
                 reusable architectures. Passionate about building efficient, maintainable solutions that solve 
                 complex real-world challenges.
@@ -49,37 +97,37 @@ const About = () => {
 
           {/* Core Values */}
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-6 hover:border-cyan-500/40 transition-all hover:scale-105">
+            <Card className="bg-white/50 dark:bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-6 hover:border-cyan-500/40 transition-all hover:scale-105">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <Code2 className="text-cyan-400" size={32} />
+                  <Code2 className="text-cyan-500 dark:text-cyan-400" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Scalable Architecture</h3>
-                <p className="text-gray-400">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Scalable Architecture</h3>
+                <p className="text-gray-600 dark:text-gray-400">
                   Building robust, maintainable systems that scale from prototype to production for global enterprises
                 </p>
               </div>
             </Card>
 
-            <Card className="bg-[#0f0f1a]/50 backdrop-blur-sm border-emerald-500/20 p-6 hover:border-emerald-500/40 transition-all hover:scale-105">
+            <Card className="bg-white/50 dark:bg-[#0f0f1a]/50 backdrop-blur-sm border-emerald-500/20 p-6 hover:border-emerald-500/40 transition-all hover:scale-105">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <Sparkles className="text-emerald-400" size={32} />
+                  <Sparkles className="text-emerald-500 dark:text-emerald-400" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Performance First</h3>
-                <p className="text-gray-400">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Performance First</h3>
+                <p className="text-gray-600 dark:text-gray-400">
                   Optimizing every layer - from GeoJSON rendering to dark mode implementations - for exceptional user experience
                 </p>
               </div>
             </Card>
 
-            <Card className="bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-6 hover:border-cyan-500/40 transition-all hover:scale-105">
+            <Card className="bg-white/50 dark:bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-6 hover:border-cyan-500/40 transition-all hover:scale-105">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="text-cyan-400" size={32} />
+                  <Zap className="text-cyan-500 dark:text-cyan-400" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Enterprise Quality</h3>
-                <p className="text-gray-400">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Enterprise Quality</h3>
+                <p className="text-gray-600 dark:text-gray-400">
                   Delivering production-ready solutions that meet global coding standards for IBM, governments, and international clients
                 </p>
               </div>

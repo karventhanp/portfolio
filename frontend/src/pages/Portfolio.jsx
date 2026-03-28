@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0a0a0f] via-[#0f0f1a] to-[#0a0a0f]">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-[#0a0a0f] dark:via-[#0f0f1a] dark:to-[#0a0a0f] transition-colors duration-300">
       <Header />
       <Hero />
       <About />

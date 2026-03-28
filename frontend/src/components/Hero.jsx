@@ -21,19 +21,19 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-500 dark:text-cyan-400 text-sm font-medium mb-6">
               Senior Frontend Engineer
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-white">Hi, I'm </span>
+            <span className="text-gray-900 dark:text-white">Hi, I'm </span>
             <span className="bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">
               Karventhan P
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             Software engineer with over 4 years of experience specializing in React.js, Next.js, and TypeScript. 
             Demonstrated expertise in optimizing data and integrating APIs to deliver effective solutions for 
             state and international clients.
@@ -49,7 +49,7 @@ const Hero = () => {
             <Button
               onClick={() => scrollToSection('contact')}
               variant="outline"
-              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-6 text-lg"
+              className="border-cyan-500/50 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/10 px-8 py-6 text-lg"
             >
               Get In Touch
             </Button>
@@ -61,7 +61,7 @@ const Hero = () => {
               href="https://github.com/karventhan"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform"
+              className="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors hover:scale-110 transform"
             >
               <Github size={24} />
             </a>
@@ -69,13 +69,13 @@ const Hero = () => {
               href="https://linkedin.com/in/karventhan"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform"
+              className="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors hover:scale-110 transform"
             >
               <Linkedin size={24} />
             </a>
             <a
               href="mailto:karventhanp27042000@gmail.com"
-              className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform"
+              className="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors hover:scale-110 transform"
             >
               <Mail size={24} />
             </a>
@@ -86,7 +86,7 @@ const Hero = () => {
       {/* Scroll indicator */}
       <button
         onClick={() => scrollToSection('about')}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-cyan-400 animate-bounce"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-cyan-500 dark:text-cyan-400 animate-bounce"
       >
         <ArrowDown size={32} />
       </button>
