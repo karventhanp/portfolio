@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
-import { ExternalLink, Github, Award } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 const projects = [
   {
@@ -77,36 +77,36 @@ const Projects = () => {
     <section id="projects" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Featured <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Projects</span>
           </h2>
-          <p className="text-gray-400 text-lg">Key projects developed from scratch for enterprises and governments</p>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">Key projects developed from scratch for enterprises and governments</p>
         </div>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-6 hover:border-cyan-500/40 transition-all hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 flex flex-col"
+              className="bg-white dark:bg-[#0f0f1a]/50 border-2 border-gray-200 dark:border-cyan-500/20 p-6 hover:border-cyan-400 dark:hover:border-cyan-500/40 transition-all hover:scale-105 hover:shadow-2xl shadow-lg dark:shadow-cyan-500/10 flex flex-col"
             >
               <div className="flex items-start justify-between mb-3">
-                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{project.title}</h3>
                 {(project.company === 'Grootan Technologies' && project.title === 'Enterprise MIS Platform') && (
-                  <Award size={20} className="text-emerald-400 flex-shrink-0" title="Best Quarter Award" />
+                  <Award size={20} className="text-emerald-500 dark:text-emerald-400 flex-shrink-0" title="Best Quarter Award" />
                 )}
               </div>
               
-              <p className="text-cyan-400 text-sm mb-3 font-medium">{project.company}</p>
+              <p className="text-cyan-600 dark:text-cyan-400 text-sm mb-3 font-medium">{project.company}</p>
               
-              <p className="text-gray-400 mb-4 flex-grow text-sm leading-relaxed">{project.description}</p>
+              <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow text-sm leading-relaxed">{project.description}</p>
               
               <div className="mb-4">
-                <p className="text-xs text-gray-500 mb-2 font-medium">Tech Stack:</p>
+                <p className="text-xs text-gray-500 dark:text-gray-500 mb-2 font-medium">Tech Stack:</p>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech, techIndex) => (
                     <Badge
                       key={techIndex}
-                      className="bg-emerald-500/20 text-emerald-400 border-none text-xs"
+                      className="bg-gradient-to-r from-emerald-500 to-teal-500 dark:bg-emerald-500/20 text-white dark:text-emerald-400 border-none text-xs"
                     >
                       {tech}
                     </Badge>
@@ -114,13 +114,13 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="mb-4 pt-4 border-t border-cyan-500/10">
-                <p className="text-xs text-gray-500 mb-2 font-medium">Key Highlights:</p>
+              <div className="mb-4 pt-4 border-t border-gray-200 dark:border-cyan-500/10">
+                <p className="text-xs text-gray-500 dark:text-gray-500 mb-2 font-medium">Key Highlights:</p>
                 <ul className="space-y-1">
                   {project.highlights.map((highlight, highlightIndex) => (
                     <li key={highlightIndex} className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 flex-shrink-0"></div>
-                      <span className="text-gray-400 text-xs">{highlight}</span>
+                      <div className="w-1.5 h-1.5 bg-cyan-500 dark:bg-cyan-400 rounded-full mt-1.5 flex-shrink-0"></div>
+                      <span className="text-gray-600 dark:text-gray-400 text-xs">{highlight}</span>
                     </li>
                   ))}
                 </ul>

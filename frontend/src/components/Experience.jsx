@@ -35,26 +35,26 @@ const Experience = () => {
     <section id="experience" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Professional <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Experience</span>
           </h2>
-          <p className="text-gray-400 text-lg">My journey in building enterprise-grade applications</p>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">My journey in building enterprise-grade applications</p>
         </div>
 
         <div className="max-w-5xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-8 hover:border-cyan-500/40 transition-all"
+              className="bg-white dark:bg-[#0f0f1a]/50 border-2 border-gray-200 dark:border-cyan-500/20 p-8 hover:border-cyan-400 dark:hover:border-cyan-500/40 transition-all shadow-lg hover:shadow-xl"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                 <div className="mb-4 md:mb-0">
-                  <h3 className="text-2xl font-semibold text-white mb-2">{exp.position}</h3>
-                  <div className="flex items-center gap-2 text-cyan-400 mb-2">
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">{exp.position}</h3>
+                  <div className="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 mb-2">
                     <Briefcase size={18} />
                     <span className="text-lg font-medium">{exp.company}</span>
                   </div>
-                  <div className="flex items-center gap-4 text-gray-400 text-sm">
+                  <div className="flex items-center gap-4 text-gray-600 dark:text-gray-400 text-sm">
                     <div className="flex items-center gap-1">
                       <MapPin size={16} />
                       <span>{exp.location}</span>
@@ -67,7 +67,7 @@ const Experience = () => {
                 </div>
                 
                 {index === 0 && (
-                  <span className="inline-block px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium">
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 dark:bg-emerald-500/10 dark:border dark:border-emerald-500/20 rounded-full text-white dark:text-emerald-400 text-sm font-medium">
                     Current
                   </span>
                 )}
@@ -76,8 +76,8 @@ const Experience = () => {
               <div className="space-y-3">
                 {exp.responsibilities.map((resp, respIndex) => (
                   <div key={respIndex} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-300 leading-relaxed">{resp}</p>
+                    <div className="w-2 h-2 bg-cyan-500 dark:bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{resp}</p>
                   </div>
                 ))}
               </div>
@@ -87,13 +87,13 @@ const Experience = () => {
 
         {/* Education */}
         <div className="max-w-5xl mx-auto mt-12">
-          <h3 className="text-2xl font-semibold text-emerald-400 mb-6 text-center">Education</h3>
-          <Card className="bg-[#0f0f1a]/50 backdrop-blur-sm border-emerald-500/20 p-8">
+          <h3 className="text-2xl font-semibold text-emerald-600 dark:text-emerald-400 mb-6 text-center">Education</h3>
+          <Card className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:bg-[#0f0f1a]/50 border-2 border-emerald-200 dark:border-emerald-500/20 p-8 shadow-lg">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between">
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">MSc in Software Systems</h4>
-                <p className="text-cyan-400 font-medium mb-2">Kongu Engineering College</p>
-                <div className="flex items-center gap-4 text-gray-400 text-sm">
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">MSc in Software Systems</h4>
+                <p className="text-cyan-600 dark:text-cyan-400 font-medium mb-2">Kongu Engineering College</p>
+                <div className="flex items-center gap-4 text-gray-600 dark:text-gray-400 text-sm">
                   <div className="flex items-center gap-1">
                     <MapPin size={16} />
                     <span>Perundurai, Erode</span>
@@ -105,8 +105,8 @@ const Experience = () => {
                 </div>
               </div>
               <div className="mt-4 md:mt-0">
-                <div className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-lg">
-                  <p className="text-cyan-400 font-semibold">GPA: 8.31</p>
+                <div className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 dark:bg-cyan-500/10 dark:border dark:border-cyan-500/20 rounded-lg">
+                  <p className="text-white dark:text-cyan-400 font-semibold">GPA: 8.31</p>
                 </div>
               </div>
             </div>

@@ -44,25 +44,25 @@ const Skills = () => {
     <section id="skills" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Technical <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Skills</span>
           </h2>
-          <p className="text-gray-400 text-lg">Technologies and tools I work with</p>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">Technologies and tools I work with</p>
         </div>
 
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Core Development */}
           <div>
-            <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Core Development</h3>
+            <h3 className="text-2xl font-semibold text-cyan-600 dark:text-cyan-400 mb-6">Core Development</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {skills.core.map((skill, index) => (
                 <Card
                   key={index}
-                  className="bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-4 hover:border-cyan-500/40 transition-all hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20"
+                  className="bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-[#0f0f1a] dark:to-[#0f0f1a] border-2 border-cyan-200 dark:border-cyan-500/20 p-4 hover:border-cyan-400 dark:hover:border-cyan-500/40 transition-all hover:scale-105 hover:shadow-xl shadow-cyan-100 dark:shadow-cyan-500/20"
                 >
                   <div className="text-center">
-                    <p className="text-white font-medium mb-2">{skill.name}</p>
-                    <Badge className="bg-cyan-500/20 text-cyan-400 border-none text-xs">
+                    <p className="text-gray-900 dark:text-white font-medium mb-2">{skill.name}</p>
+                    <Badge className="bg-cyan-500 dark:bg-cyan-500/20 text-white dark:text-cyan-400 border-none text-xs">
                       {skill.level}
                     </Badge>
                   </div>
@@ -73,16 +73,16 @@ const Skills = () => {
 
           {/* UI & Styling */}
           <div>
-            <h3 className="text-2xl font-semibold text-emerald-400 mb-6">UI & Styling</h3>
+            <h3 className="text-2xl font-semibold text-emerald-600 dark:text-emerald-400 mb-6">UI & Styling</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {skills.uiStyling.map((skill, index) => (
                 <Card
                   key={index}
-                  className="bg-[#0f0f1a]/50 backdrop-blur-sm border-emerald-500/20 p-4 hover:border-emerald-500/40 transition-all hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20"
+                  className="bg-gradient-to-br from-emerald-50 to-green-50 dark:from-[#0f0f1a] dark:to-[#0f0f1a] border-2 border-emerald-200 dark:border-emerald-500/20 p-4 hover:border-emerald-400 dark:hover:border-emerald-500/40 transition-all hover:scale-105 hover:shadow-xl shadow-emerald-100 dark:shadow-emerald-500/20"
                 >
                   <div className="text-center">
-                    <p className="text-white font-medium mb-2">{skill.name}</p>
-                    <Badge className="bg-emerald-500/20 text-emerald-400 border-none text-xs">
+                    <p className="text-gray-900 dark:text-white font-medium mb-2">{skill.name}</p>
+                    <Badge className="bg-emerald-500 dark:bg-emerald-500/20 text-white dark:text-emerald-400 border-none text-xs">
                       {skill.level}
                     </Badge>
                   </div>
@@ -93,16 +93,16 @@ const Skills = () => {
 
           {/* Integrations */}
           <div>
-            <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Integrations</h3>
+            <h3 className="text-2xl font-semibold text-cyan-600 dark:text-cyan-400 mb-6">Integrations</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {skills.integrations.map((skill, index) => (
                 <Card
                   key={index}
-                  className="bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-4 hover:border-cyan-500/40 transition-all hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20"
+                  className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-[#0f0f1a] dark:to-[#0f0f1a] border-2 border-blue-200 dark:border-cyan-500/20 p-4 hover:border-blue-400 dark:hover:border-cyan-500/40 transition-all hover:scale-105 hover:shadow-xl shadow-blue-100 dark:shadow-cyan-500/20"
                 >
                   <div className="text-center">
-                    <p className="text-white font-medium mb-2">{skill.name}</p>
-                    <Badge className="bg-cyan-500/20 text-cyan-400 border-none text-xs">
+                    <p className="text-gray-900 dark:text-white font-medium mb-2">{skill.name}</p>
+                    <Badge className="bg-blue-500 dark:bg-cyan-500/20 text-white dark:text-cyan-400 border-none text-xs">
                       {skill.level}
                     </Badge>
                   </div>
@@ -113,16 +113,16 @@ const Skills = () => {
 
           {/* Backend & Cloud */}
           <div>
-            <h3 className="text-2xl font-semibold text-emerald-400 mb-6">Backend & Cloud</h3>
+            <h3 className="text-2xl font-semibold text-emerald-600 dark:text-emerald-400 mb-6">Backend & Cloud</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {skills.backend.map((skill, index) => (
                 <Card
                   key={index}
-                  className="bg-[#0f0f1a]/50 backdrop-blur-sm border-emerald-500/20 p-4 hover:border-emerald-500/40 transition-all hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20"
+                  className="bg-gradient-to-br from-teal-50 to-emerald-50 dark:from-[#0f0f1a] dark:to-[#0f0f1a] border-2 border-teal-200 dark:border-emerald-500/20 p-4 hover:border-teal-400 dark:hover:border-emerald-500/40 transition-all hover:scale-105 hover:shadow-xl shadow-teal-100 dark:shadow-emerald-500/20"
                 >
                   <div className="text-center">
-                    <p className="text-white font-medium mb-2">{skill.name}</p>
-                    <Badge className="bg-emerald-500/20 text-emerald-400 border-none text-xs">
+                    <p className="text-gray-900 dark:text-white font-medium mb-2">{skill.name}</p>
+                    <Badge className="bg-teal-500 dark:bg-emerald-500/20 text-white dark:text-emerald-400 border-none text-xs">
                       {skill.level}
                     </Badge>
                   </div>
@@ -133,16 +133,16 @@ const Skills = () => {
 
           {/* Secondary Frameworks */}
           <div>
-            <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Secondary Frameworks</h3>
+            <h3 className="text-2xl font-semibold text-indigo-600 dark:text-cyan-400 mb-6">Secondary Frameworks</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
               {skills.secondary.map((skill, index) => (
                 <Card
                   key={index}
-                  className="bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-4 hover:border-cyan-500/40 transition-all hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20"
+                  className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-[#0f0f1a] dark:to-[#0f0f1a] border-2 border-indigo-200 dark:border-cyan-500/20 p-4 hover:border-indigo-400 dark:hover:border-cyan-500/40 transition-all hover:scale-105 hover:shadow-xl shadow-indigo-100 dark:shadow-cyan-500/20"
                 >
                   <div className="text-center">
-                    <p className="text-white font-medium mb-2">{skill.name}</p>
-                    <Badge className="bg-cyan-500/20 text-cyan-400 border-none text-xs">
+                    <p className="text-gray-900 dark:text-white font-medium mb-2">{skill.name}</p>
+                    <Badge className="bg-indigo-500 dark:bg-cyan-500/20 text-white dark:text-cyan-400 border-none text-xs">
                       {skill.level}
                     </Badge>
                   </div>
