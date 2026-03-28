@@ -34,8 +34,9 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            React.js • Next.js • TypeScript specialist with 4+ years building scalable web applications 
-            for global enterprises like IBM and government platforms.
+            Software engineer with over 4 years of experience specializing in React.js, Next.js, and TypeScript. 
+            Demonstrated expertise in optimizing data and integrating APIs to deliver effective solutions for 
+            state and international clients.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-12">

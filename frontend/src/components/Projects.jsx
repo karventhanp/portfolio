@@ -128,33 +128,6 @@ const Projects = () => {
             </Card>
           ))}
         </div>
-
-        {/* Notable Clients Section */}
-        <div className="max-w-4xl mx-auto mt-16">
-          <Card className="bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-8">
-            <h3 className="text-2xl font-semibold text-center text-white mb-6">
-              Delivered Solutions For
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div>
-                <p className="text-cyan-400 font-semibold mb-1">IBM</p>
-                <p className="text-gray-400 text-sm">Global Enterprise</p>
-              </div>
-              <div>
-                <p className="text-emerald-400 font-semibold mb-1">State Govts</p>
-                <p className="text-gray-400 text-sm">TN, KA, AP</p>
-              </div>
-              <div>
-                <p className="text-cyan-400 font-semibold mb-1">Veolia</p>
-                <p className="text-gray-400 text-sm">International</p>
-              </div>
-              <div>
-                <p className="text-emerald-400 font-semibold mb-1">Suez</p>
-                <p className="text-gray-400 text-sm">International</p>
-              </div>
-            </div>
-          </Card>
-        </div>
       </div>
     </section>
   );

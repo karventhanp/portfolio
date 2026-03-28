@@ -30,20 +30,19 @@ const About = () => {
 
             <div className="space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed">
-                Software Engineer with 4+ years of experience building and scaling web applications 
-                from the ground up. Expert in React.js and Next.js, with a proven track record of 
-                delivering high-quality frontend solutions for global enterprises like IBM and 
-                high-security platforms like KOBIL IAM.
+                Senior Frontend Engineer with 4+ years of experience architecting and developing scalable 
+                web applications. Proven expertise in React.js, Next.js, and TypeScript with a track record 
+                of delivering high-quality solutions for global enterprises and government platforms.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Specialized in GIS Mapping (ArcGIS), Keycloak, and optimizing large-scale data (GeoJSON) 
-                for government and private sector clients. Passionate about creating efficient, scalable, 
-                and user-centric web applications that solve real-world problems.
+                Specialized in GIS mapping integration (ArcGIS), secure authentication systems (Keycloak, OAuth 2.0), 
+                and performance optimization. Successfully delivered production applications for state governments 
+                (Tamil Nadu, Karnataka, Andhra Pradesh) and international clients including IBM, Veolia, and Suez.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Awarded "Best Quarter" for rapid project delivery and developing highly optimized, 
-                reusable architectures. Committed to continuous learning and staying ahead of the 
-                latest frontend technologies.
+                Recognized with "Best Quarter" award for exceptional project delivery and developing optimized, 
+                reusable architectures. Passionate about building efficient, maintainable solutions that solve 
+                complex real-world challenges.
               </p>
             </div>
           </div>
