@@ -53,7 +53,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <Card className="bg-gradient-to-br from-cyan-50 to-blue-50 dark:bg-[#0f0f1a]/50 border-2 border-cyan-200 dark:border-cyan-500/20 p-6 shadow-lg">
+            <Card className="bg-cyan-50 dark:bg-[#0f0f1a]/50 border-2 border-cyan-200 dark:border-cyan-500/20 p-6 shadow-lg dark:backdrop-blur-sm">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-cyan-500 dark:bg-cyan-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Mail className="text-white dark:text-cyan-400" size={24} />
@@ -65,7 +65,7 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:bg-[#0f0f1a]/50 border-2 border-emerald-200 dark:border-emerald-500/20 p-6 shadow-lg">
+            <Card className="bg-emerald-50 dark:bg-[#0f0f1a]/50 border-2 border-emerald-200 dark:border-emerald-500/20 p-6 shadow-lg dark:backdrop-blur-sm">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-emerald-500 dark:bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Phone className="text-white dark:text-emerald-400" size={24} />
@@ -77,7 +77,7 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:bg-[#0f0f1a]/50 border-2 border-blue-200 dark:border-cyan-500/20 p-6 shadow-lg">
+            <Card className="bg-blue-50 dark:bg-[#0f0f1a]/50 border-2 border-blue-200 dark:border-cyan-500/20 p-6 shadow-lg dark:backdrop-blur-sm">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-blue-500 dark:bg-cyan-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MapPin className="text-white dark:text-cyan-400" size={24} />

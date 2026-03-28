@@ -88,7 +88,7 @@ const Experience = () => {
         {/* Education */}
         <div className="max-w-5xl mx-auto mt-12">
           <h3 className="text-2xl font-semibold text-emerald-600 dark:text-emerald-400 mb-6 text-center">Education</h3>
-          <Card className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:bg-[#0f0f1a]/50 border-2 border-emerald-200 dark:border-emerald-500/20 p-8 shadow-lg">
+          <Card className="bg-emerald-50 dark:bg-[#0f0f1a]/50 border-2 border-emerald-200 dark:border-emerald-500/20 p-8 shadow-lg dark:backdrop-blur-sm">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between">
               <div>
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">MSc in Software Systems</h4>
