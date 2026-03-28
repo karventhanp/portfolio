@@ -106,7 +106,7 @@ const Projects = () => {
                   {project.techStack.map((tech, techIndex) => (
                     <Badge
                       key={techIndex}
-                      className="bg-gradient-to-r from-emerald-500 to-teal-500 dark:bg-emerald-500/20 text-white dark:text-emerald-400 border-none text-xs"
+                      className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white dark:from-cyan-400 dark:to-emerald-400 dark:text-gray-900 border-none text-xs font-semibold"
                     >
                       {tech}
                     </Badge>
