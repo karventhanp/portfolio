@@ -30,19 +30,20 @@ const About = () => {
 
             <div className="space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed">
-                I'm a passionate frontend engineer with over 5 years of experience building modern, 
-                responsive, and user-centric web applications. My journey in web development started 
-                with a curiosity about how things work on the web, which quickly evolved into a deep 
-                passion for creating exceptional digital experiences.
+                Software Engineer with 4+ years of experience building and scaling web applications 
+                from the ground up. Expert in React.js and Next.js, with a proven track record of 
+                delivering high-quality frontend solutions for global enterprises like IBM and 
+                high-security platforms like KOBIL IAM.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                I specialize in React ecosystem, TypeScript, and modern frontend architectures. 
-                I believe in writing clean, maintainable code and creating interfaces that not only 
-                look great but also provide seamless user experiences.
+                Specialized in GIS Mapping (ArcGIS), Keycloak, and optimizing large-scale data (GeoJSON) 
+                for government and private sector clients. Passionate about creating efficient, scalable, 
+                and user-centric web applications that solve real-world problems.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the developer community.
+                Awarded "Best Quarter" for rapid project delivery and developing highly optimized, 
+                reusable architectures. Committed to continuous learning and staying ahead of the 
+                latest frontend technologies.
               </p>
             </div>
           </div>
@@ -54,9 +55,9 @@ const About = () => {
                 <div className="w-16 h-16 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
                   <Code2 className="text-cyan-400" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Clean Code</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">Scalable Architecture</h3>
                 <p className="text-gray-400">
-                  Writing maintainable, scalable, and well-documented code that stands the test of time
+                  Building robust, maintainable systems that scale from prototype to production for global enterprises
                 </p>
               </div>
             </Card>
@@ -66,9 +67,9 @@ const About = () => {
                 <div className="w-16 h-16 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
                   <Sparkles className="text-emerald-400" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">User Experience</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">Performance First</h3>
                 <p className="text-gray-400">
-                  Creating intuitive interfaces that delight users and solve real-world problems
+                  Optimizing every layer - from GeoJSON rendering to dark mode implementations - for exceptional user experience
                 </p>
               </div>
             </Card>
@@ -78,9 +79,9 @@ const About = () => {
                 <div className="w-16 h-16 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
                   <Zap className="text-cyan-400" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Performance</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">Enterprise Quality</h3>
                 <p className="text-gray-400">
-                  Optimizing every aspect to deliver fast, efficient, and responsive applications
+                  Delivering production-ready solutions that meet global coding standards for IBM, governments, and international clients
                 </p>
               </div>
             </Card>

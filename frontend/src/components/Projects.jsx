@@ -1,51 +1,74 @@
 import React from 'react';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
-import { ExternalLink, Github } from 'lucide-react';
-import { Button } from './ui/button';
+import { ExternalLink, Github, Award } from 'lucide-react';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce platform with cart management, payment integration, and admin dashboard. Built with modern React patterns and optimized for performance.',
-    techStack: ['React', 'TypeScript', 'Redux', 'Stripe API', 'Tailwind CSS'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Robotic Inspection Dashboard',
+    company: 'Solinas Integrity',
+    description: 'A specialized web application for managing infrastructure data, interactive maps, and inspection reporting. Features real-time data processing, GeoJSON optimization, and ArcGIS integration for pipeline monitoring.',
+    techStack: ['React.js', 'Next.js', 'ArcGIS', 'Keycloak', 'GeoJSON', 'REST APIs'],
+    highlights: [
+      'Built from scratch for government and international clients',
+      'Optimized large GeoJSON file rendering',
+      'Integrated secure authentication with Keycloak'
+    ]
   },
   {
-    title: 'Task Management App',
-    description: 'Collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features. Focused on productivity and user experience.',
-    techStack: ['Next.js', 'TypeScript', 'MongoDB', 'Socket.io', 'Shadcn UI'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Enterprise MIS Platform',
+    company: 'Grootan Technologies',
+    description: 'A centralized Management Information System for project tracking, leave management, and resource effort consolidation. Integrates with Jira and Zoho APIs to manage data for 100+ employees.',
+    techStack: ['Next.js', 'TypeScript', 'Jira API', 'Zoho API', 'Node.js', 'MongoDB'],
+    highlights: [
+      'Complete end-to-end development',
+      'Real-time project tracking and analytics',
+      'Automated effort consolidation'
+    ]
   },
   {
-    title: 'Weather Dashboard',
-    description: 'Real-time weather dashboard with location-based forecasts, interactive maps, and weather alerts. Features beautiful data visualizations and responsive design.',
-    techStack: ['React', 'Chart.js', 'Weather API', 'Geolocation', 'CSS Modules'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'KOBIL IAM Frontend',
+    company: 'Grootan Technologies',
+    description: 'Frontend components for KOBIL Identity and Access Management platform, handling secure digital identity, token management, and complex authentication flows for enterprise clients.',
+    techStack: ['React.js', 'TypeScript', 'OAuth 2.0', 'KOBIL IAM', 'Security Protocols'],
+    highlights: [
+      'Enterprise-grade security implementation',
+      'Token-based authentication flows',
+      'Role-based access control'
+    ]
   },
   {
-    title: 'Portfolio CMS',
-    description: 'Content management system for creative professionals to showcase their work. Includes drag-and-drop builder, image optimization, and SEO tools.',
-    techStack: ['React', 'Node.js', 'PostgreSQL', 'AWS S3', 'Material-UI'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'IBM Enterprise Modules',
+    company: 'Grootan Technologies',
+    description: 'High-impact frontend modules for IBM enterprise services, built to global coding standards with focus on scalability, performance, and maintainability.',
+    techStack: ['React.js', 'TypeScript', 'Enterprise Design Systems', 'REST APIs'],
+    highlights: [
+      'Adherence to IBM coding standards',
+      'Enterprise-level scalability',
+      'Performance optimization'
+    ]
   },
   {
-    title: 'Fitness Tracker',
-    description: 'Mobile-responsive fitness tracking app with workout logs, progress charts, and goal setting. Integrates with popular fitness APIs for comprehensive tracking.',
-    techStack: ['React Native', 'TypeScript', 'Firebase', 'Redux Toolkit', 'Recharts'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Government Infrastructure Portal',
+    company: 'Solinas Integrity',
+    description: 'Production applications for State Governments (Tamil Nadu, Karnataka, Andhra Pradesh) featuring interactive mapping, data visualization, and infrastructure monitoring.',
+    techStack: ['React.js', 'ArcGIS', 'GeoJSON', 'Keycloak', 'REST APIs'],
+    highlights: [
+      'Multi-state government deployment',
+      'GIS mapping and visualization',
+      'Secure government-grade authentication'
+    ]
   },
   {
-    title: 'Social Media Analytics',
-    description: 'Analytics dashboard for social media metrics with real-time data processing, custom reports, and data export features. Built for scalability and performance.',
-    techStack: ['Next.js', 'TypeScript', 'GraphQL', 'D3.js', 'Prisma'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Departmental Store System',
+    company: 'Personal Project',
+    description: 'A full-stack application designed to manage inventory and sales data with an optimized SQL database structure. Features real-time inventory tracking and sales analytics.',
+    techStack: ['React.js', 'Node.js', 'SQL', 'Express', 'REST APIs'],
+    highlights: [
+      'Full-stack development',
+      'Optimized database structure',
+      'Real-time inventory management'
+    ]
   },
 ];
 
@@ -57,7 +80,7 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Featured <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Projects</span>
           </h2>
-          <p className="text-gray-400 text-lg">Some of my recent work and side projects</p>
+          <p className="text-gray-400 text-lg">Key projects developed from scratch for enterprises and governments</p>
         </div>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -66,11 +89,19 @@ const Projects = () => {
               key={index}
               className="bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-6 hover:border-cyan-500/40 transition-all hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 flex flex-col"
             >
-              <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
-              <p className="text-gray-400 mb-4 flex-grow">{project.description}</p>
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                {(project.company === 'Grootan Technologies' && project.title === 'Enterprise MIS Platform') && (
+                  <Award size={20} className="text-emerald-400 flex-shrink-0" title="Best Quarter Award" />
+                )}
+              </div>
+              
+              <p className="text-cyan-400 text-sm mb-3 font-medium">{project.company}</p>
+              
+              <p className="text-gray-400 mb-4 flex-grow text-sm leading-relaxed">{project.description}</p>
               
               <div className="mb-4">
-                <p className="text-sm text-gray-500 mb-2">Tech Stack:</p>
+                <p className="text-xs text-gray-500 mb-2 font-medium">Tech Stack:</p>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech, techIndex) => (
                     <Badge
@@ -83,27 +114,46 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="flex gap-3 mt-auto">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10"
-                  onClick={() => window.open(project.github, '_blank')}
-                >
-                  <Github size={16} className="mr-2" />
-                  Code
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-600 hover:to-emerald-600 text-white border-none"
-                  onClick={() => window.open(project.live, '_blank')}
-                >
-                  <ExternalLink size={16} className="mr-2" />
-                  Live Demo
-                </Button>
+              <div className="mb-4 pt-4 border-t border-cyan-500/10">
+                <p className="text-xs text-gray-500 mb-2 font-medium">Key Highlights:</p>
+                <ul className="space-y-1">
+                  {project.highlights.map((highlight, highlightIndex) => (
+                    <li key={highlightIndex} className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 flex-shrink-0"></div>
+                      <span className="text-gray-400 text-xs">{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </Card>
           ))}
+        </div>
+
+        {/* Notable Clients Section */}
+        <div className="max-w-4xl mx-auto mt-16">
+          <Card className="bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-8">
+            <h3 className="text-2xl font-semibold text-center text-white mb-6">
+              Delivered Solutions For
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div>
+                <p className="text-cyan-400 font-semibold mb-1">IBM</p>
+                <p className="text-gray-400 text-sm">Global Enterprise</p>
+              </div>
+              <div>
+                <p className="text-emerald-400 font-semibold mb-1">State Govts</p>
+                <p className="text-gray-400 text-sm">TN, KA, AP</p>
+              </div>
+              <div>
+                <p className="text-cyan-400 font-semibold mb-1">Veolia</p>
+                <p className="text-gray-400 text-sm">International</p>
+              </div>
+              <div>
+                <p className="text-emerald-400 font-semibold mb-1">Suez</p>
+                <p className="text-gray-400 text-sm">International</p>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>

@@ -22,20 +22,20 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6">
             <span className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              Frontend Engineer
+              Senior Frontend Engineer
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="text-white">Hi, I'm </span>
             <span className="bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              Alex Morgan
+              Karventhan P
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            Crafting exceptional digital experiences with modern web technologies. 
-            Specialized in React, TypeScript, and building scalable frontend architectures.
+            React.js • Next.js • TypeScript specialist with 4+ years building scalable web applications 
+            for global enterprises like IBM and government platforms.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-12">
@@ -57,7 +57,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex gap-6 justify-center">
             <a
-              href="https://github.com"
+              href="https://github.com/karventhan"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform"
@@ -65,7 +65,7 @@ const Hero = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/karventhan"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform"
@@ -73,7 +73,7 @@ const Hero = () => {
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:alex@example.com"
+              href="mailto:karventhanp27042000@gmail.com"
               className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform"
             >
               <Mail size={24} />

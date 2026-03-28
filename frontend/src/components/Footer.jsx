@@ -10,16 +10,16 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent mb-2">
-              {'<Dev />'}
+              Karventhan P
             </h3>
             <p className="text-gray-400 text-sm">
-              Building the web, one component at a time
+              Building scalable web applications, one component at a time
             </p>
           </div>
 
           <div className="flex gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/karventhan"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform"
@@ -27,7 +27,7 @@ const Footer = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/karventhan"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform"
@@ -35,7 +35,7 @@ const Footer = () => {
               <Linkedin size={24} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/karventhan"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform"
@@ -43,7 +43,7 @@ const Footer = () => {
               <Twitter size={24} />
             </a>
             <a
-              href="mailto:alex@example.com"
+              href="mailto:karventhanp27042000@gmail.com"
               className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform"
             >
               <Mail size={24} />
@@ -53,7 +53,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-cyan-500/10 text-center">
           <p className="text-gray-400 text-sm flex items-center justify-center gap-2">
-            © {currentYear} Alex Morgan. Built with <Heart size={16} className="text-cyan-400" /> using React & Tailwind CSS
+            © {currentYear} Karventhan P. Built with <Heart size={16} className="text-cyan-400" /> using React & Tailwind CSS
           </p>
         </div>
       </div>
