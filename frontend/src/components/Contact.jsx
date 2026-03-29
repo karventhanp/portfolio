@@ -60,7 +60,7 @@ const Contact = () => {
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Connect With Me</h4>
             <div className="flex gap-6 justify-center">
               <a
-                href="https://github.com/karventhan"
+                href="https://github.com/karventhanp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 bg-gray-100 dark:bg-[#0f0f1a]/50 border-2 border-gray-300 dark:border-cyan-500/20 rounded-lg flex items-center justify-center text-gray-700 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 hover:border-cyan-400 dark:hover:border-cyan-500/40 hover:scale-110 transition-all"
@@ -68,20 +68,12 @@ const Contact = () => {
                 <Github size={28} />
               </a>
               <a
-                href="https://linkedin.com/in/karventhan"
+                href="https://linkedin.com/in/karventhanp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 bg-gray-100 dark:bg-[#0f0f1a]/50 border-2 border-gray-300 dark:border-cyan-500/20 rounded-lg flex items-center justify-center text-gray-700 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 hover:border-cyan-400 dark:hover:border-cyan-500/40 hover:scale-110 transition-all"
               >
                 <Linkedin size={28} />
-              </a>
-              <a
-                href="https://twitter.com/karventhan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 bg-gray-100 dark:bg-[#0f0f1a]/50 border-2 border-gray-300 dark:border-cyan-500/20 rounded-lg flex items-center justify-center text-gray-700 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 hover:border-cyan-400 dark:hover:border-cyan-500/40 hover:scale-110 transition-all"
-              >
-                <Twitter size={28} />
               </a>
             </div>
           </div>

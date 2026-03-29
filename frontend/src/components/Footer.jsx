@@ -19,7 +19,7 @@ const Footer = () => {
 
           <div className="flex gap-6">
             <a
-              href="https://github.com/karventhan"
+              href="https://github.com/karventhanp"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors hover:scale-110 transform"
@@ -27,20 +27,12 @@ const Footer = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/karventhan"
+              href="https://linkedin.com/in/karventhanp"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors hover:scale-110 transform"
             >
               <Linkedin size={24} />
-            </a>
-            <a
-              href="https://twitter.com/karventhan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors hover:scale-110 transform"
-            >
-              <Twitter size={24} />
             </a>
             <a
               href="mailto:karventhanp27042000@gmail.com"

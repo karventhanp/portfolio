@@ -1,8 +1,8 @@
-import React from 'react';
-import { Code2, Sparkles, Zap, Image as ImageIcon, Code } from 'lucide-react';
-import { Card } from './ui/card';
-import { Button } from './ui/button';
-import { useTheme } from '../context/ThemeContext';
+import React from "react";
+import { Code2, Sparkles, Zap, Image as ImageIcon, Code } from "lucide-react";
+import { Card } from "./ui/card";
+import { Button } from "./ui/button";
+import { useTheme } from "../context/ThemeContext";
 
 const About = () => {
   const { usePhoto, togglePhoto } = useTheme();
@@ -12,9 +12,14 @@ const About = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            About <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Me</span>
+            About{" "}
+            <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+              Me
+            </span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg">Get to know more about my journey and what drives me</p>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
+            Get to know more about my journey and what drives me
+          </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -25,26 +30,26 @@ const About = () => {
                   {usePhoto ? (
                     <div className="relative w-full h-full">
                       {/* Profile Photo - Supports multiple formats */}
-                      <img 
-                        src="/profile-photo.JPG" 
-                        alt="Karventhan P" 
-                        className="w-full h-full object-cover rounded-2xl"
+                      <img
+                        src="/profile-photo.JPG"
+                        alt="Karventhan P"
+                        className="w-full h-full object-cover object-[50%_25%] rounded-2xl"
                         onError={(e) => {
                           // Try alternative formats
-                          if (e.target.src.includes('.JPG')) {
-                            e.target.src = '/profile-photo.jpg';
-                          } else if (e.target.src.includes('.jpg')) {
-                            e.target.src = '/profile-photo.png';
-                          } else if (e.target.src.includes('.png')) {
-                            e.target.src = '/profile-photo.PNG';
-                          } else if (e.target.src.includes('.PNG')) {
-                            e.target.src = '/profile-photo.jpeg';
-                          } else if (e.target.src.includes('.jpeg')) {
-                            e.target.src = '/profile-photo.JPEG';
+                          if (e.target.src.includes(".JPG")) {
+                            e.target.src = "/profile-photo.jpg";
+                          } else if (e.target.src.includes(".jpg")) {
+                            e.target.src = "/profile-photo.png";
+                          } else if (e.target.src.includes(".png")) {
+                            e.target.src = "/profile-photo.PNG";
+                          } else if (e.target.src.includes(".PNG")) {
+                            e.target.src = "/profile-photo.jpeg";
+                          } else if (e.target.src.includes(".jpeg")) {
+                            e.target.src = "/profile-photo.JPEG";
                           } else {
                             // Show fallback if all formats fail
-                            e.target.style.display = 'none';
-                            e.target.nextSibling.style.display = 'flex';
+                            e.target.style.display = "none";
+                            e.target.nextSibling.style.display = "flex";
                           }
                         }}
                       />
@@ -53,9 +58,15 @@ const About = () => {
                         <div className="w-48 h-48 mx-auto bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-full flex items-center justify-center mb-4">
                           <ImageIcon size={80} className="text-white" />
                         </div>
-                        <p className="text-cyan-400 dark:text-cyan-400 text-lg font-medium">Add your photo</p>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">Place image at /frontend/public/profile-photo.JPG</p>
-                        <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">(Supports .jpg, .JPG, .png, .PNG, .jpeg, .JPEG)</p>
+                        <p className="text-cyan-400 dark:text-cyan-400 text-lg font-medium">
+                          Add your photo
+                        </p>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
+                          Place image at /frontend/public/profile-photo.JPG
+                        </p>
+                        <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">
+                          (Supports .jpg, .JPG, .png, .PNG, .jpeg, .JPEG)
+                        </p>
                       </div>
                     </div>
                   ) : (
@@ -63,11 +74,13 @@ const About = () => {
                       <div className="w-48 h-48 mx-auto bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-full flex items-center justify-center mb-4">
                         <Code2 size={80} className="text-white" />
                       </div>
-                      <p className="text-cyan-400 dark:text-cyan-400 text-lg font-medium">Frontend Engineer</p>
+                      <p className="text-cyan-400 dark:text-cyan-400 text-lg font-medium">
+                        Frontend Engineer
+                      </p>
                     </div>
                   )}
                 </div>
-                
+
                 {/* Toggle Button */}
                 <Button
                   onClick={togglePhoto}
@@ -92,19 +105,13 @@ const About = () => {
 
             <div className="space-y-6">
               <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-                Senior Frontend Engineer with 4+ years of experience architecting and developing scalable 
-                web applications. Proven expertise in React.js, Next.js, and TypeScript with a track record 
-                of delivering high-quality solutions for global enterprises and government platforms.
+                Senior Frontend Engineer | 4+ years of experience | Architecting and developing scalable, high-performance web applications from the ground up. Proven expertise in React.js, Next.js, and TypeScript, with a track record of delivering specialized solutions for industry leaders and critical government platforms.
               </p>
               <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-                Specialized in GIS mapping integration (ArcGIS), secure authentication systems (Keycloak, OAuth 2.0), 
-                and performance optimization. Successfully delivered production applications for state governments 
-                (Tamil Nadu, Karnataka, Andhra Pradesh) and international clients including IBM, Veolia, and Suez.
+                Specialized in GIS mapping (ArcGIS), Enterprise Auth (Keycloak), and complex data optimization. Successfully delivered production-grade applications for state governments and private sector leaders including IBM, Veolia, and Suez.
               </p>
               <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-                Recognized with "Best Quarter" award for exceptional project delivery and developing optimized, 
-                reusable architectures. Passionate about building efficient, maintainable solutions that solve 
-                complex real-world challenges.
+                Recognized with the "Best Quarter" award for architectural excellence and reusable component design.
               </p>
             </div>
           </div>
@@ -114,11 +121,17 @@ const About = () => {
             <Card className="bg-white/50 dark:bg-[#0f0f1a]/50 backdrop-blur-sm border-cyan-500/20 p-6 hover:border-cyan-500/40 transition-all hover:scale-105">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <Code2 className="text-cyan-500 dark:text-cyan-400" size={32} />
+                  <Code2
+                    className="text-cyan-500 dark:text-cyan-400"
+                    size={32}
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Scalable Architecture</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Scalable Architecture
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Building robust, maintainable systems that scale from prototype to production for global enterprises
+                  Building robust, maintainable systems that scale from
+                  prototype to production for global enterprises
                 </p>
               </div>
             </Card>
@@ -126,11 +139,17 @@ const About = () => {
             <Card className="bg-white/50 dark:bg-[#0f0f1a]/50 backdrop-blur-sm border-emerald-500/20 p-6 hover:border-emerald-500/40 transition-all hover:scale-105">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <Sparkles className="text-emerald-500 dark:text-emerald-400" size={32} />
+                  <Sparkles
+                    className="text-emerald-500 dark:text-emerald-400"
+                    size={32}
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Performance First</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Performance First
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Optimizing every layer - from GeoJSON rendering to dark mode implementations - for exceptional user experience
+                  Optimizing every layer - from GeoJSON rendering to dark mode
+                  implementations - for exceptional user experience
                 </p>
               </div>
             </Card>
@@ -140,9 +159,12 @@ const About = () => {
                 <div className="w-16 h-16 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
                   <Zap className="text-cyan-500 dark:text-cyan-400" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Enterprise Quality</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Enterprise Quality
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Delivering production-ready solutions that meet global coding standards for IBM, governments, and international clients
+                  Delivering production-ready solutions that meet global coding
+                  standards for IBM, governments, and international clients
                 </p>
               </div>
             </Card>

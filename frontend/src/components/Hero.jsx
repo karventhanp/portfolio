@@ -58,7 +58,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex gap-6 justify-center">
             <a
-              href="https://github.com/karventhan"
+              href="https://github.com/karventhanp"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors hover:scale-110 transform"
@@ -66,7 +66,7 @@ const Hero = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/karventhan"
+              href="https://linkedin.com/in/karventhanp"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors hover:scale-110 transform"
