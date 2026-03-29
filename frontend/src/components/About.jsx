@@ -24,24 +24,32 @@ const About = () => {
                 <div className="w-full h-96 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 dark:from-cyan-500/20 dark:to-emerald-500/20 rounded-2xl backdrop-blur-sm border border-cyan-500/20 flex items-center justify-center overflow-hidden">
                   {usePhoto ? (
                     <div className="relative w-full h-full">
-                      {/* Profile Photo - Replace src with actual photo path */}
+                      {/* Profile Photo - Supports multiple formats */}
                       <img 
                         src="/profile-photo.jpg" 
                         alt="Karventhan P" 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-2xl"
                         onError={(e) => {
-                          // Fallback to placeholder if image not found
-                          e.target.style.display = 'none';
-                          e.target.nextSibling.style.display = 'flex';
+                          // Try alternative formats
+                          if (e.target.src.includes('.jpg')) {
+                            e.target.src = '/profile-photo.png';
+                          } else if (e.target.src.includes('.png')) {
+                            e.target.src = '/profile-photo.jpeg';
+                          } else {
+                            // Show fallback if all formats fail
+                            e.target.style.display = 'none';
+                            e.target.nextSibling.style.display = 'flex';
+                          }
                         }}
                       />
                       {/* Fallback placeholder */}
-                      <div className="absolute inset-0 hidden flex-col items-center justify-center">
+                      <div className="absolute inset-0 hidden flex-col items-center justify-center bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 dark:from-cyan-500/20 dark:to-emerald-500/20 backdrop-blur-sm border border-cyan-500/20 rounded-2xl">
                         <div className="w-48 h-48 mx-auto bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-full flex items-center justify-center mb-4">
                           <ImageIcon size={80} className="text-white" />
                         </div>
-                        <p className="text-cyan-400 text-lg font-medium">Add your photo</p>
-                        <p className="text-gray-400 text-sm mt-2">Place image at /public/profile-photo.jpg</p>
+                        <p className="text-cyan-400 dark:text-cyan-400 text-lg font-medium">Add your photo</p>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">Place image at /public/profile-photo.jpg</p>
+                        <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">(Supports .jpg, .png, .jpeg)</p>
                       </div>
                     </div>
                   ) : (
