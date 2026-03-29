@@ -26,15 +26,21 @@ const About = () => {
                     <div className="relative w-full h-full">
                       {/* Profile Photo - Supports multiple formats */}
                       <img 
-                        src="/profile-photo.jpg" 
+                        src="/profile-photo.JPG" 
                         alt="Karventhan P" 
                         className="w-full h-full object-cover rounded-2xl"
                         onError={(e) => {
                           // Try alternative formats
-                          if (e.target.src.includes('.jpg')) {
+                          if (e.target.src.includes('.JPG')) {
+                            e.target.src = '/profile-photo.jpg';
+                          } else if (e.target.src.includes('.jpg')) {
                             e.target.src = '/profile-photo.png';
                           } else if (e.target.src.includes('.png')) {
+                            e.target.src = '/profile-photo.PNG';
+                          } else if (e.target.src.includes('.PNG')) {
                             e.target.src = '/profile-photo.jpeg';
+                          } else if (e.target.src.includes('.jpeg')) {
+                            e.target.src = '/profile-photo.JPEG';
                           } else {
                             // Show fallback if all formats fail
                             e.target.style.display = 'none';
@@ -48,8 +54,8 @@ const About = () => {
                           <ImageIcon size={80} className="text-white" />
                         </div>
                         <p className="text-cyan-400 dark:text-cyan-400 text-lg font-medium">Add your photo</p>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">Place image at /public/profile-photo.jpg</p>
-                        <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">(Supports .jpg, .png, .jpeg)</p>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">Place image at /frontend/public/profile-photo.JPG</p>
+                        <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">(Supports .jpg, .JPG, .png, .PNG, .jpeg, .JPEG)</p>
                       </div>
                     </div>
                   ) : (
