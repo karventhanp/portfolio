@@ -9,6 +9,9 @@ const skills = {
     { name: 'TypeScript', level: 'Expert' },
     { name: 'JavaScript (ES6+)', level: 'Expert' },
     { name: 'HTML5/CSS3', level: 'Expert' },
+    { name: 'Redux', level: 'Expert' },
+    { name: 'Zustand', level: 'Expert' },
+    { name: 'Context API', level: 'Expert' },
   ],
   secondary: [
     { name: 'Angular', level: 'Basic' },
